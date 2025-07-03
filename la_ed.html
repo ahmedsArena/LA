@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ahmed">
 
-<title>LA bachelors Ed – LA-bachelors</title>
+<title>LA ed – LA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +67,24 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<script src="site_libs/plotly-binding-4.11.0/plotly.js"></script>
+
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -81,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">LA-bachelors</span>
+    <span class="navbar-title">LA</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -117,19 +134,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">LA bachelors Ed</h1>
+<h1 class="title">LA ed</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ahmed </p>
-          </div>
-  </div>
     
   
     
@@ -142,12 +153,17 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="cell">
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: • You have not set a Census API key. Users without a key are limited to 500
-queries per day and may experience performance limitations.
-ℹ For best results, get a Census API key at
-http://api.census.gov/data/key_signup.html and then supply the key to the
-`census_api_key()` function to use it throughout your tidycensus session.
-This warning is displayed once per session.</code></pre>
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors
+Getting data from the 2016-2020 5-year ACS</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
@@ -162,12 +178,28 @@ This warning is displayed once per session.</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="la_ed_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'plotly'</code></pre>
 </div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:ggplot2':
+
+    last_plot</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:stats':
+
+    filter</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:graphics':
+
+    layout</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-4f144503f4d24b68cf11" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-4f144503f4d24b68cf11">{"x":{"visdat":{"52c82c441676":["function () ","plotlyVisDat"]},"cur_data":"52c82c441676","attrs":{"52c82c441676":{"x":{},"y":{},"text":{},"hoverinfo":"text","marker":{"color":{},"colorscale":"YlGnBu","showscale":true},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"}},"layout":{"margin":{"b":100,"l":60,"t":25,"r":10},"title":{"text":"🎓 Bachelor's Degree Attainment (25+) in Appling County, GA","font":{"size":20,"family":"Arial","color":"#2c3e50"}},"xaxis":{"domain":[0,1],"automargin":true,"title":"Census Tract","tickangle":-45,"type":"category","categoryorder":"array","categoryarray":["Tract 9503.02","Tract 9502.02","Tract 9504","Tract 9503.01","Tract 9501","Tract 9502.01"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Percent with Bachelor's Degree"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":["Tract 9501","Tract 9502.01","Tract 9502.02","Tract 9503.01","Tract 9503.02","Tract 9504"],"y":[6.2800000000000002,9.3499999999999996,0.88300000000000001,6.0499999999999998,0,3.71],"text":["Tract:  Tract 9501 <br> Total (25+):  2134 <br> Bachelor's Degree:  134 <br> Percent:  6.28 %","Tract:  Tract 9502.01 <br> Total (25+):  1551 <br> Bachelor's Degree:  145 <br> Percent:  9.35 %","Tract:  Tract 9502.02 <br> Total (25+):  1698 <br> Bachelor's Degree:  15 <br> Percent:  0.88 %","Tract:  Tract 9503.01 <br> Total (25+):  1984 <br> Bachelor's Degree:  120 <br> Percent:  6.05 %","Tract:  Tract 9503.02 <br> Total (25+):  1234 <br> Bachelor's Degree:  0 <br> Percent:  0 %","Tract:  Tract 9504 <br> Total (25+):  1293 <br> Bachelor's Degree:  48 <br> Percent:  3.71 %"],"hoverinfo":["text","text","text","text","text","text"],"marker":{"color":[6.2800000000000002,9.3499999999999996,0.88300000000000001,6.0499999999999998,0,3.71],"colorscale":"YlGnBu","showscale":true,"line":{"color":"rgba(31,119,180,1)"}},"type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
@@ -246,7 +278,7 @@ This warning is displayed once per session.</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/ahmedsArena\.github\.io\/LA\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
